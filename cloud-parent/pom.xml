@@ -68,6 +68,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
             <scope>test</scope>
         </dependency>
 
@@ -98,13 +104,6 @@
             <artifactId>lombok-mapstruct-binding</artifactId>
             <version>${lombok-mapstruct-binding.version}</version>
             <scope>provided</scope>
-        </dependency>
-
-        <!-- 自用框架 -->
-        <dependency>
-            <groupId>net.hwyz.iov.cloud</groupId>
-            <artifactId>framework-commons</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <!-- 常用工具 -->
